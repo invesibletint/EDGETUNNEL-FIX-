@@ -1,16 +1,16 @@
 // @ts-ignore
 import { connect } from 'cloudflare:sockets';
 //伪装主页设置
-let token= 'error';
-let pdomain = 'www.pptv.com';
+let token= 'vip';
+let pdomain = 'mdecgroup.world';
 //uuid设置
-let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
+let userID = '01e8f00f-3d42-4117-a796-40c3ee6e2128';
 //订阅器设置
 let RproxyIP = 'false';
-let sub = 'alvless.comorg.us.kg';
+let sub = 'Private+Server';
 let subconfig = 'https://raw.githubusercontent.com/JustLagom/WorkerSub/main/urltestconfig.ini';
 //CF网络穿透设置 一:proxyip，二:SOCKS5
-let proxyIP = 'edgetunnel.anycast.eu.org';
+let proxyIP = '147.139.245.56';
 let socks5Address = '';
 
 if (!isValidUUID(userID)) {
@@ -816,14 +816,19 @@ function socks5AddressParser(address) {
  */
 async function getCONFIG(userID, hostName, sub, RproxyIP, _url) {
     return `
-    <p>===================================================配置详解=======================================================</p>
-      Subscribe / sub 订阅地址, 支持 Base64、clash-meta、sing-box 订阅格式, 您的订阅内容由 ${sub} 提供维护支持, 是否使用订阅器内置ProxyIP: ${RproxyIP}.
-    --------------------------------------------------------------------------------------------------------------------
-      订阅地址：https://${sub}/sub?host=${hostName}&uuid=${userID}&proxyip=${RproxyIP}
-    <p>=================================================================================================================</p>
-      github 项目地址 Star!Star!Star!!!
-      telegram 交流群 技术大佬~在线发牌!
-      https://t.me/CMLiussss
-    <p>=================================================================================================================</p>
-    `
-}
+
+
+
+
+
+
+
+
+==========================================
+============= VLESS  ACCOUNT =============
+==========================================
+
+vless://${userID}@${hostName}:443?path=%2Fvless&security=tls&encryption=none&host=${hostName}&type=ws&sni=${hostName}#${sub}
+
+==========================================
+`}
